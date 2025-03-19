@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="16.476" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-19T13:00:03.946870900Z">
+<testcase classname="Purchase a product from saucedemo" name="Create Order Saucedemo - #1.1" time="16.348">
+<system-out><![CDATA[
+Given Buyer landing to saucedemo............................................passed
+Given Buyer login to the saucedemo username standard_user and password secret_sauce.passed
+When Buyer add a saucedemo product Sauce Labs Backpack to the cart..........passed
+And Buyer checkout saucedemo product Sauce Labs Backpack....................passed
+And Buyer insert Jhon Wick 12345 for shipping...............................passed
+And Buyer will see checkout overview Sauce Labs Backpack....................passed
+Then Buyer will see message confirmation page Thank you for your order!.....passed
+]]></system-out>
+</testcase>
+</testsuite>
