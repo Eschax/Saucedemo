@@ -38,19 +38,20 @@ public class StepdefinitionsImpl extends BaseTest {
         landingPage.login(username, password);
     }
 
-    @When("^Buyer add a saucedemo product (.+) to the cart$")
-    public void addProductToCartTugas(String productname) throws InterruptedException{
+    @When("^Buyer add a saucedemo product (.+) and (.+) to the cart$")
+    public void addProductToCartTugas(String productname, String productname2) throws InterruptedException{
         ProductListPage productListPage = new ProductListPage(driver);
         productListPage.addToCart(productname);
+        productListPage.addToCart(productname2);
         driver.findElement(By.cssSelector(".shopping_cart_container a.shopping_cart_link")).click();
-
     }
 
-    @And("^Buyer checkout saucedemo product (.+)$")
-    public void checkoutProductTugas(String productname) throws InterruptedException{
+    @And("^Buyer checkout saucedemo product (.+) and (.+)$")
+    public void checkoutProduct(String productname, String productname2) throws InterruptedException{
         CartPage cartPage = new CartPage(driver);
         cartPage.GoToCheckout();
         Assert.assertTrue(cartPage.verifyCheckoutProduct(productname));
+        Assert.assertTrue(cartPage.verifyCheckoutProduct(productname2));
         cartPage.checkout();
     }
 

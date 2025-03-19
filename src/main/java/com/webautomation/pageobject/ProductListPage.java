@@ -45,6 +45,13 @@ public class ProductListPage extends AbstractComponent {
         Thread.sleep(2000);
         product.findElement(cartButton).click();
     }
+
+    public void addToCart2(String productName) throws InterruptedException{
+        visibilityOfElementLocated(listElement);
+        product = getProductByName(productName);
+        Thread.sleep(2000);
+        product.findElement(cartButton).click();
+    }
 }
 
 
