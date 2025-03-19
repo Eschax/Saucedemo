@@ -26,20 +26,20 @@ public class StepdefinitionsImpl extends BaseTest {
 
     //tugas
     @Given("Buyer landing to saucedemo")
-    public void landingPageTugas() throws IOException{
+    public void landingPage() throws IOException{
         //setup driver
 
         driver = initializeDriver();
     }
 
     @Given("^Buyer login to the saucedemo username (.+) and password (.+)$")
-    public void buyerLoginTugas(String username, String password) throws InterruptedException{
+    public void buyerLogin(String username, String password) throws InterruptedException{
         LandingPage landingPage = new LandingPage(driver);
         landingPage.login(username, password);
     }
 
     @When("^Buyer add a saucedemo product (.+) and (.+) to the cart$")
-    public void addProductToCartTugas(String productname, String productname2) throws InterruptedException{
+    public void addProductToCartdua(String productname, String productname2) throws InterruptedException{
         ProductListPage productListPage = new ProductListPage(driver);
         productListPage.addToCart(productname);
         productListPage.addToCart(productname2);
@@ -47,7 +47,7 @@ public class StepdefinitionsImpl extends BaseTest {
     }
 
     @And("^Buyer checkout saucedemo product (.+) and (.+)$")
-    public void checkoutProduct(String productname, String productname2) throws InterruptedException{
+    public void checkoutDuaProduct(String productname, String productname2) throws InterruptedException{
         CartPage cartPage = new CartPage(driver);
         cartPage.GoToCheckout();
         Assert.assertTrue(cartPage.verifyCheckoutProduct(productname));
@@ -56,7 +56,7 @@ public class StepdefinitionsImpl extends BaseTest {
     }
 
     @And("^Buyer insert (.+) (.+) (.+) for shipping$")
-    public void placeOrderTugas(String firstName, String lastName, String postalCode) throws InterruptedException {
+    public void placeOrder(String firstName, String lastName, String postalCode) throws InterruptedException {
         OrderPage orderPage = new OrderPage(driver);
         orderPage.order(firstName, lastName, postalCode);
     }
@@ -73,8 +73,23 @@ public class StepdefinitionsImpl extends BaseTest {
         String confirmationText = confirmationPage.verifyConfirmation();
         Assert.assertEquals(confirmationText, terimaKasih);
 
-    
         driver.close();
+    }
+
+    
+    @When("^Buyer add a product (.+) to the cart$")
+    public void addProductToCartsatu(String productname) throws InterruptedException {
+        ProductListPage productListPage = new ProductListPage(driver);
+        productListPage.addToCart(productname);
+        driver.findElement(By.cssSelector(".shopping_cart_container a.shopping_cart_link")).click();
+    }
+
+    @And("^Buyer checkout product (.+)$")
+    public void checkoutSatuProduct(String productname) throws InterruptedException{
+        CartPage cartPage = new CartPage(driver);
+        cartPage.GoToCheckout();
+        Assert.assertTrue(cartPage.verifyCheckoutProduct(productname));
+        cartPage.checkout();
     }
 }
 

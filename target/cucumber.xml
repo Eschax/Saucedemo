@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="19.773" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-19T14:52:23.173950700Z">
-<testcase classname="Purchase a product from saucedemo" name="Create Order Saucedemo - #1.1" time="19.639">
+<testsuite name="Cucumber" time="31.891" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-03-19T22:02:26.190048200Z">
+<testcase classname="Purchase a product from saucedemo" name="Checkout two products Saucedemo - #1.1" time="16.384">
 <system-out><![CDATA[
 Given Buyer landing to saucedemo............................................passed
 Given Buyer login to the saucedemo username standard_user and password secret_sauce.passed
@@ -8,6 +8,17 @@ When Buyer add a saucedemo product Sauce Labs Backpack and Sauce Labs Bike Light
 And Buyer checkout saucedemo product Sauce Labs Backpack and Sauce Labs Bike Light.passed
 And Buyer insert Jhon Wick 12345 for shipping...............................passed
 And Buyer will see checkout overview Sauce Labs Backpack....................passed
+Then Buyer will see message confirmation page Thank you for your order!.....passed
+]]></system-out>
+</testcase>
+<testcase classname="Purchase a product from saucedemo" name="Checkout one product Saucedemo - #1.1" time="15.186">
+<system-out><![CDATA[
+Given Buyer landing to saucedemo............................................passed
+Given Buyer login to the saucedemo username standard_user and password secret_sauce.passed
+When Buyer add a product Sauce Labs Fleece Jacket to the cart...............passed
+And Buyer checkout product Sauce Labs Fleece Jacket.........................passed
+And Buyer insert Jhon Wick 12345 for shipping...............................passed
+And Buyer will see checkout overview Sauce Labs Fleece Jacket...............passed
 Then Buyer will see message confirmation page Thank you for your order!.....passed
 ]]></system-out>
 </testcase>
