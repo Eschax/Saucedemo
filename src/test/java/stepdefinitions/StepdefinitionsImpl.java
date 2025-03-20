@@ -14,6 +14,7 @@ import com.webautomation.pageobject.OrderPage;
 import com.webautomation.pageobject.ProductListPage;
 
 import components.BaseTest;
+import hook.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -28,8 +29,7 @@ public class StepdefinitionsImpl extends BaseTest {
     @Given("Buyer landing to saucedemo")
     public void landingPage() throws IOException{
         //setup driver
-
-        driver = initializeDriver();
+        driver = Hooks.initializeDriver();
     }
 
     @Given("^Buyer login to the saucedemo username (.+) and password (.+)$")
@@ -72,8 +72,6 @@ public class StepdefinitionsImpl extends BaseTest {
         Confrimation confirmationPage = new Confrimation(driver);
         String confirmationText = confirmationPage.verifyConfirmation();
         Assert.assertEquals(confirmationText, terimaKasih);
-
-        driver.close();
     }
 
     

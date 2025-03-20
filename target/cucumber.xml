@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="31.891" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-03-19T22:02:26.190048200Z">
-<testcase classname="Purchase a product from saucedemo" name="Checkout two products Saucedemo - #1.1" time="16.384">
+<testsuite name="Cucumber" time="47.241" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-03-20T14:21:03.927615800Z">
+<testcase classname="Purchase a product from saucedemo" name="Checkout two products Saucedemo - #1.1" time="15.934">
 <system-out><![CDATA[
 Given Buyer landing to saucedemo............................................passed
 Given Buyer login to the saucedemo username standard_user and password secret_sauce.passed
@@ -11,7 +11,18 @@ And Buyer will see checkout overview Sauce Labs Backpack....................pass
 Then Buyer will see message confirmation page Thank you for your order!.....passed
 ]]></system-out>
 </testcase>
-<testcase classname="Purchase a product from saucedemo" name="Checkout one product Saucedemo - #1.1" time="15.186">
+<testcase classname="Purchase a product from saucedemo" name="Checkout two products Saucedemo - #1.2" time="16.621">
+<system-out><![CDATA[
+Given Buyer landing to saucedemo............................................passed
+Given Buyer login to the saucedemo username standard_user and password secret_sauce.passed
+When Buyer add a saucedemo product Sauce Labs Onesie and Sauce Labs Bolt T-Shirt to the cart.passed
+And Buyer checkout saucedemo product Sauce Labs Onesie and Sauce Labs Bolt T-Shirt.passed
+And Buyer insert Ujang pengkor 69696 for shipping...........................passed
+And Buyer will see checkout overview Sauce Labs Onesie......................passed
+Then Buyer will see message confirmation page Thank you for your order!.....passed
+]]></system-out>
+</testcase>
+<testcase classname="Purchase a product from saucedemo" name="Checkout one product Saucedemo - #1.1" time="14.507">
 <system-out><![CDATA[
 Given Buyer landing to saucedemo............................................passed
 Given Buyer login to the saucedemo username standard_user and password secret_sauce.passed

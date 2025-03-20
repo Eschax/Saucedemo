@@ -1,9 +1,8 @@
-D:\Bootcamp QA\WebAutomation\src\main\java\com\webautomation\exploration\JavaStream.java
-D:\Bootcamp QA\WebAutomation\src\main\java\com\webautomation\locator\Alert.java
-D:\Bootcamp QA\WebAutomation\src\main\java\com\webautomation\locator\HandleWindow.java
-D:\Bootcamp QA\WebAutomation\src\main\java\com\webautomation\locator\LocatorPracticeAI.java
-D:\Bootcamp QA\WebAutomation\src\main\java\com\webautomation\locator\SeleniumIntroduction.java
-D:\Bootcamp QA\WebAutomation\src\main\java\com\webautomation\locator\TugasLocator.java
-D:\Bootcamp QA\WebAutomation\src\main\java\com\webautomation\Main.java
-D:\Bootcamp QA\WebAutomation\src\main\java\com\webautomation\scenario\StandAloneTest.java
-D:\Bootcamp QA\WebAutomation\src\main\java\com\webautomation\scenario\tugasE2E.java
+D:\Bootcamp QA\Saucedemo\src\main\java\com\webautomation\abstractcomponent\AbstractComponent.java
+D:\Bootcamp QA\Saucedemo\src\main\java\com\webautomation\Main.java
+D:\Bootcamp QA\Saucedemo\src\main\java\com\webautomation\pageobject\CartPage.java
+D:\Bootcamp QA\Saucedemo\src\main\java\com\webautomation\pageobject\Confrimation.java
+D:\Bootcamp QA\Saucedemo\src\main\java\com\webautomation\pageobject\LandingPage.java
+D:\Bootcamp QA\Saucedemo\src\main\java\com\webautomation\pageobject\OrderPage.java
+D:\Bootcamp QA\Saucedemo\src\main\java\com\webautomation\pageobject\ProductListPage.java
+D:\Bootcamp QA\Saucedemo\src\main\java\com\webautomation\scenario\e2e.java
