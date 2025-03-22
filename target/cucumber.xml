@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="47.241" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-03-20T14:21:03.927615800Z">
-<testcase classname="Purchase a product from saucedemo" name="Checkout two products Saucedemo - #1.1" time="15.934">
+<testsuite name="Cucumber" time="43.11" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-03-22T09:01:34.322549200Z">
+<testcase classname="Purchase a product from saucedemo" name="Checkout two products Saucedemo - #1.1" time="15.083">
 <system-out><![CDATA[
 Given Buyer landing to saucedemo............................................passed
 Given Buyer login to the saucedemo username standard_user and password secret_sauce.passed
@@ -11,7 +11,7 @@ And Buyer will see checkout overview Sauce Labs Backpack....................pass
 Then Buyer will see message confirmation page Thank you for your order!.....passed
 ]]></system-out>
 </testcase>
-<testcase classname="Purchase a product from saucedemo" name="Checkout two products Saucedemo - #1.2" time="16.621">
+<testcase classname="Purchase a product from saucedemo" name="Checkout two products Saucedemo - #1.2" time="14.245">
 <system-out><![CDATA[
 Given Buyer landing to saucedemo............................................passed
 Given Buyer login to the saucedemo username standard_user and password secret_sauce.passed
@@ -22,7 +22,7 @@ And Buyer will see checkout overview Sauce Labs Onesie......................pass
 Then Buyer will see message confirmation page Thank you for your order!.....passed
 ]]></system-out>
 </testcase>
-<testcase classname="Purchase a product from saucedemo" name="Checkout one product Saucedemo - #1.1" time="14.507">
+<testcase classname="Purchase a product from saucedemo" name="Checkout one product Saucedemo - #1.1" time="13.635">
 <system-out><![CDATA[
 Given Buyer landing to saucedemo............................................passed
 Given Buyer login to the saucedemo username standard_user and password secret_sauce.passed

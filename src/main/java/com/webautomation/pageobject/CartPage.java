@@ -48,5 +48,6 @@ public class CartPage extends AbstractComponent {
             Thread.sleep(2000);
             checkoutButton.click();
         }
+        
 
 }

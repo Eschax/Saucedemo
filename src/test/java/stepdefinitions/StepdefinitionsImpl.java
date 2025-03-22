@@ -43,7 +43,7 @@ public class StepdefinitionsImpl extends BaseTest {
         ProductListPage productListPage = new ProductListPage(driver);
         productListPage.addToCart(productname);
         productListPage.addToCart(productname2);
-        driver.findElement(By.cssSelector(".shopping_cart_container a.shopping_cart_link")).click();
+        productListPage.goToCart();
     }
 
     @And("^Buyer checkout saucedemo product (.+) and (.+)$")
