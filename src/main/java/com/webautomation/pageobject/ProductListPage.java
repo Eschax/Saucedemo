@@ -27,6 +27,7 @@ public class ProductListPage extends AbstractComponent {
     By cartButton = By.cssSelector("button.btn_primary.btn_inventory");
     By titleProduct = By.cssSelector(".inventory_item_name");
     By listElement = By.cssSelector(".inventory_item");
+    By removeButton = By.cssSelector(".btn_small");
 
     public  List<WebElement> getProductList(){
         return listProducts;
@@ -35,7 +36,6 @@ public class ProductListPage extends AbstractComponent {
     public WebElement getProductByName(String productName){
         WebElement product = getProductList().stream().filter(prod -> 
         prod.findElement(titleProduct).getText().equals(productName)).findFirst().orElse(null);
-
         return product;
     }
 
@@ -49,6 +49,11 @@ public class ProductListPage extends AbstractComponent {
         visibilityOfElementLocated(listElement);
         product = getProductByName(productName);
         product.findElement(cartButton).click();
+    }
+
+    public void removeProduct(String productName){
+        product = getProductByName(productName);
+        product.findElement(removeButton).click();
     }
 }
 

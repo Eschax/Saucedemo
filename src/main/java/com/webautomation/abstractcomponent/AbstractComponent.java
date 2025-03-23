@@ -14,9 +14,14 @@ public class AbstractComponent {
 
     @FindBy(css = ".shopping_cart_container a.shopping_cart_link")
     WebElement cartButton;
+
+    @FindBy(css = "#continue-shopping")
+    WebElement backToHome;
+
     public AbstractComponent(WebDriver driver){
         this.driver = driver;
     }
+
 
     public void visibilityOfElementLocated(By locator){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -24,6 +29,9 @@ public class AbstractComponent {
     }
     public void goToCart(){
         cartButton.click();
+    }
+    public void goToProductList(){
+        backToHome.click();
     }
 }
 

@@ -30,7 +30,8 @@ public class CartPage extends AbstractComponent {
 
         By cartPage = By.cssSelector(".shopping_cart_container a.shopping_cart_link");
         By rowButton = By.cssSelector(".cart_list");
-        
+        By removeBtn = By.cssSelector(".cart_item");
+
         public void GoToCheckout(){
             visibilityOfElementLocated(cartPage);
             GoToCartpage.click();
@@ -39,7 +40,6 @@ public class CartPage extends AbstractComponent {
         public Boolean verifyCheckoutProduct(String productName){
             visibilityOfElementLocated(cartPage);
             Boolean match = listProduct.stream().anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(productName));
-    
             return match;
         }
 
@@ -48,6 +48,7 @@ public class CartPage extends AbstractComponent {
             Thread.sleep(2000);
             checkoutButton.click();
         }
-        
 
+        
 }
+
